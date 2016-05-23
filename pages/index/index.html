@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>riot test</title>
+    <title>title</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
-    <style>
-    </style>
 </head>
 <body>
     <page>
-        <!-- @2 继承 多yield -->
         <yield to="header"><hd title="腾讯课堂"></hd></yield>
-        <yield to="body"><index></index></yield>
-        <yield to="footer"><ft now-year="2016"></ft></yield>
-        <!-- @2 继承 多yield -->
+        <yield to="body">
+            <cnt>
+                <yield to="content">
+                    <index name="long"></index>
+                    <ft now-year="2016"></ft>
+                </yield>
+            </cnt>
+        </yield>
+        <yield to="ft">
+            <ft2 now-year="2016"></ft2>
+        </yield>
     </page>
 
     <!-- 引入 js -->
