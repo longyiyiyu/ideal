@@ -11,8 +11,14 @@
         <yield to="body">
             <cnt>
                 <yield to="content">
-                    <index name="long"></index>
+
+                    <index id="container" name="long" course-list="...">
+                        <yield to="list">
+                            <coursecard2 q-repeat="opts.courseList" pic="this.pic" title="this.title" price="this.price" desc="this.desc"></coursecard2>
+                        </yield>
+                    </index>
                     <ft now-year="2016"></ft>
+                    
                 </yield>
             </cnt>
         </yield>
